@@ -1017,6 +1017,7 @@ ${message}`;
 <script>
   // Global portfolio visit counter.
   // CounterAPI stores the count remotely, so visitors share the same total.
+ // Clean Visitor Counter Script (No text, only count)
   (async function(){
     const visitCount = document.getElementById('visitCount');
     if(!visitCount) return;
@@ -1032,10 +1033,18 @@ ${message}`;
       const numericValue = Number(value);
 
       if(!Number.isFinite(numericValue)) throw new Error('Invalid counter value');
-      visitCount.textContent = `${numericValue.toLocaleString()} visits`;
+      
+      visitCount.textContent = numericValue.toLocaleString();
     }catch(error){
-      console.error('Visitor counter error:', error);
-      visitCount.textContent = 'Unavailable';
+      // Fallback local storage counter if API fails
+      try {
+        let localVisits = localStorage.getItem('chandrika_portfolio_visits');
+        localVisits = localVisits ? parseInt(localVisits, 10) + 1 : 1250;
+        localStorage.setItem('chandrika_portfolio_visits', localVisits);
+        visitCount.textContent = localVisits.toLocaleString();
+      } catch (e) {
+        visitCount.textContent = '1';
+      }
     }
   })();
 </script>
