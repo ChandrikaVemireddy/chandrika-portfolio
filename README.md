@@ -45,7 +45,7 @@ Research-driven approach to hide secret data in images without altering cover co
 ---
 
 ## 🏆 𝐀𝐜𝐡𝐢𝐞𝐯𝐞𝐦𝐞𝐧𝐭𝐬 & 𝐂𝐞𝐫𝐭𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧𝐬
-- 🥈 Silver Medal, International Mathematics Olympiad 2018
+- 🥈 Silver Medal, International Mathematics Olympiad 
 - 📜 Data Analyst in Python, Tableau, SQL with Projects — Udemy
 - 🤝 Student Volunteer, JGAM'23
 
